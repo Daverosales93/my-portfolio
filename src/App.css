@@ -31,23 +31,45 @@ a.btn:hover {
   background-color: #21a1f1;
 }
 
-@media (prefers-color-scheme: light) {
+@media (max-width: 768px) {
   body {
-    background-color: #f4f4f4;
-    color: #222;
+    font-size: 16px;
   }
 
-  h1, h2 {
-    color: #007acc;
+  .container {
+    padding: 1rem;
+    text-align: center;
   }
 
-  a.btn {
-    background-color: #007acc;
-    color: white;
+  h1 {
+    font-size: 1.8rem;
   }
 
-  a.btn:hover {
-    background-color: #005f99;
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  img.profile-pic {
+    width: 120px;
+    border-radius: 12px;
+  }
+
+  .btn {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .projects ul {
+    padding: 0;
+  }
+
+  .projects li {
+    font-size: 0.95rem;
+    margin: 0.5rem 0;
+  }
+
+  footer {
+    font-size: 0.9rem;
   }
 }
 .profile-pic {
