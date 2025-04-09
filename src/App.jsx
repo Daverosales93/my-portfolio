@@ -1,32 +1,49 @@
 import './App.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
 function App() {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
   return (
     <div className="container">
-      <header>
-        <h1>👋 ¡Hola! Soy Dave Rosales</h1>
-        <p>Desarrollador Full Stack en proceso. Apasionado por la tecnología, el aprendizaje constante y el café ☕</p>
-        <a href="/cv_dave_rosales.pdf" download className="btn">
-          📄 Descargar CV
+      <header data-aos="fade-down">
+        <h1>👋 Hi! I'm David Rosales</h1>
+        <p>Full Stack Developer in progress. Passionate about tech, lifelong learning, and good coffee ☕</p>
+        <a href="/CV_David.pdf" download className="btn">
+          📄 Download CV
         </a>
       </header>
 
-      <section className="about">
-        <h2>Sobre mí</h2>
+      <section className="about" data-aos="fade-up">
+        <h2>About me</h2>
         <p>
-          Tengo experiencia en soporte técnico, administración de sistemas y me estoy formando como desarrollador Python y frontend con React.
-          Me encanta combinar lo visual con lo funcional. También hablo francés, italiano, y algo de latín 😎.
+          I have experience in tech support, systems administration, and I'm training in Python development as a Full Stack Developper.
+          I love mixing visuals with functionality. I speak Spanish as native, English as second language and French and brazilian Portuguese😎.
+          I take pride in building trustworthy, empathetic relationships with end users and always strive to maintain a calm, professional demeanor under pressure. My “can-do” attitude and proactive communication style have helped me resolve complex technical issues efficiently, while promoting a collaborative team environment.
         </p>
       </section>
 
-      <section className="projects">
-        <h2>Proyectos destacados</h2>
+      <section className="projects" data-aos="fade-left">
+        <h2>Featured Projects</h2>
         <ul>
-          <li>🧠 <strong>Server Watchdog</strong> - Monitor de recursos del sistema en Python</li>
-          <li>🎫 <strong>Ticket Hero</strong> - Automatización de tareas de soporte</li>
-          <li>🌐 <strong>Este portafolio</strong> - hecho con Vite + React y desplegado en GitHub Pages</li>
+          <li>🧠 <strong>Server Watchdog</strong> – A system resource monitor built in Python</li>
+          <li>🎫 <strong>Ticket Hero</strong> – Task automation for support teams</li>
+          <li>🌐 <strong>This Portfolio</strong> – Built with Vite + React and deployed to GitHub Pages</li>
         </ul>
       </section>
+
+      <footer className="contact" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p>📧 daverosales93@gmail.com</p>
+        <p>
+          <a href="https://github.com/Daverosales93" target="_blank" rel="noreferrer">GitHub</a> |
+          <a href="https://www.linkedin.com/in/daverosales93" target="_blank" rel="noreferrer"> LinkedIn</a>
+        </p>
+      </footer>
     </div>
   );
 }
