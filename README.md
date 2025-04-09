@@ -1,12 +1,36 @@
-# React + Vite
+# 👨‍💻 Dave Rosales – Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome! This is my personal portfolio site, built with **React + Vite** and deployed with **GitHub Pages**.
 
-Currently, two official plugins are available:
+## 🚀 Projects
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 🎫 Ticket Hero
+A Python automation tool that connects to support ticketing platforms like Zendesk and automates the classification and reporting of tickets.
 
-## Expanding the ESLint configuration
+🔗 [View on GitHub](https://github.com/Daverosales93/ticket-hero)
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+### 🧠 Server Watchdog
+A system resource monitor that checks CPU, RAM, and disk usage and sends alerts when thresholds are exceeded.
+
+🔗 [View on GitHub](https://github.com/Daverosales93/server-watchdog)
+
+---
+
+### 🌐 My Portfolio
+The very site you're seeing! Built with React, styled with CSS, and animated with AOS.
+
+🔗 [View Live](https://Daverosales93.github.io/my-portfolio)
+
+---
+
+## 📫 Contact
+
+- ✉️ Email: daverosales93@gmail.com  
+- 🌐 [GitHub](https://github.com/Daverosales93)  
+- 💼 [LinkedIn](https://www.linkedin.com/in/daverosales93)
+
+---
+
+Thanks for visiting! 🙌
