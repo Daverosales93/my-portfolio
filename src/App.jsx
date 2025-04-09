@@ -1,15 +1,32 @@
+import { useTranslation } from 'react-i18next';
 import './App.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { useEffect } from 'react';
+import { use, useEffect, useState } from 'react';
+import { Typewriter } from 'react-simple-typewriter';
+import { motion } from 'framer-motion';
 
 function App() {
+  const { t, i18n } = useTranslation();
+  const [darkMode, setDarkMode] = useState(true);
+
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
 
+  useEffect(() => {
+    document.body.className = darkMode ? 'dark-mode' : 'light-mode';
+  }, [darkMode]);
+
   return (
     <div className="container">
+      <div style={{ textAlign: 'right', marginBottom: '1rem' }}>
+        <button onClick={() => i18n.changeLanguage('en')} className="btn">🇺🇸 English</button>
+        <button onClick={() => i18n.changeLanguage('es')} className="btn">🇲🇽 Español</button>
+        <button onClick={() => setDarkMode(!darkMode)} className="btn">
+          {darkMode ? '🌞 Light' : '🌙 Dark'}
+        </button>
+      </div>
       <header data-aos="fade-down">
       import { Typewriter } from 'react-simple-typewriter';
 
@@ -32,32 +49,30 @@ function App() {
   </span>
 </motion.h1>
         <img src={`${import.meta.env.BASE_URL}dave-profile.png`} alt="Dave Rosales" className="profile-pic"/>
-        <p>Full Stack Developer in progress. Passionate about tech, lifelong learning, and good friend ☕</p>
+        <p>{t('header.description')}</p>
         <a href={`${import.meta.env.BASE_URL}CV_David.pdf`} download className="btn">
-          📄 Download CV
+          📄 {t('header.download')}
         </a>
       </header>
 
       <section className="about" data-aos="fade-up">
-      <motion.h2 initial={{ opacity: 0, y: -50 }}animate={{ opacity: 1, y: 0 }}transition={{ duration: 1 }}>About me</motion.h2>
+      <motion.h2 initial={{ opacity: 0, y: -50 }}animate={{ opacity: 1, y: 0 }}transition={{ duration: 1 }}>{t('about.title')}</motion.h2>
         <p>
-          I have experience in tech support, systems administration, and I'm training in Python development as a Full Stack Developper.
-          I love mixing visuals with functionality. I speak Spanish as native, English as second language and French and brazilian Portuguese😎.
-          I take pride in building trustworthy, empathetic relationships with end users and always strive to maintain a calm, professional demeanor under pressure. My “can-do” attitude and proactive communication style have helped me resolve complex technical issues efficiently, while promoting a collaborative team environment.
+          {t('about.description')}
         </p>
       </section>
 
       <section className="projects" data-aos="fade-left">
-      <motion.h2 initial={{ opacity: 0, y: -50 }}animate={{ opacity: 1, y: 0 }}transition={{ duration: 1 }}>Featured Projects</motion.h2>
+      <motion.h2 initial={{ opacity: 0, y: -50 }}animate={{ opacity: 1, y: 0 }}transition={{ duration: 1 }}>{t('projects.title')}</motion.h2>
         <ul>
-          <li>🧠 <strong>Server Watchdog</strong> – A system resource monitor built in Python</li>
-          <li>🎫 <strong>Ticket Hero</strong> – Task automation for support teams</li>
-          <li>🌐 <strong>This Portfolio</strong> – Built with Vite + React and deployed to GitHub Pages</li>
+          <li>🧠 <strong>{t('projects.serverWatchdog.title')}</strong> – {t('projects.serverWatchdog.description')}</li>
+          <li>🎫 <strong>{t('projects.ticketHero.title')}</strong> – {t('projects.ticketHero.description')}</li>
+          <li>🌐 <strong>{t('projects.portfolio.title')}</strong> – {t('projects.portfolio.description')}</li>
         </ul>
       </section>
 
       <footer className="contact" data-aos="fade-up">
-      <motion.h2 initial={{ opacity: 0, y: -50 }}animate={{ opacity: 1, y: 0 }}transition={{ duration: 1 }}>Contact</motion.h2>
+      <motion.h2 initial={{ opacity: 0, y: -50 }}animate={{ opacity: 1, y: 0 }}transition={{ duration: 1 }}>{t('contact.title')}</motion.h2>
         <p>📧 daverosales93@gmail.com</p>
         <p>
           <a href="https://github.com/Daverosales93" target="_blank" rel="noreferrer">GitHub</a> |

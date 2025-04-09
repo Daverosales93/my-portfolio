@@ -79,3 +79,12 @@ a.btn:hover {
   display: block;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
+body.dark-mode {
+  background-color: #121212;
+  color: #f2f2f2;
+}
+
+body.light-mode {
+  background-color: #fdfdfd;
+  color: #1a1a1a;
+}
