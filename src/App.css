@@ -50,3 +50,10 @@ a.btn:hover {
     background-color: #005f99;
   }
 }
+.profile-pic {
+  width: 160px;
+  border-radius: 100%;
+  margin: 1rem auto;
+  display: block;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
