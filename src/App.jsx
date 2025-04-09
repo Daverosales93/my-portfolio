@@ -12,7 +12,7 @@ function App() {
     <div className="container">
       <header data-aos="fade-down">
         <h1>👋 Hi! I'm David Rosales</h1>
-          <img src="/dave-profile.png" alt="Dave Rosales" className="profile-pic"/>
+          <img src="dave-profile.png" alt="Dave Rosales" className="profile-pic"/>
         <p>Full Stack Developer in progress. Passionate about tech, lifelong learning, and good friend ☕</p>
         <a href="/CV_David.pdf" download className="btn">
           📄 Download CV
